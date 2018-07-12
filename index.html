@@ -1,14 +1,25 @@
-<script> (function(e,d) {
-        //Ringba.com phone number tracking
-        var ringba_com_tag="JSa6d4d80cf89d4d55bec47b14d7b0ed76";
-        var sc = d.getElementsByTagName('script'), s = _sc[_sc.length - 1];
-        e._rgba = e._rgba || { q: [] }; e._rgba.q.push({ tag: ringba_com_tag, script: _s });
+<script>
+    function GetNumber(number, tagId, firstTime)
+    {
+	if(firstTime)
+        window.pnumber = number;
+        // alert("Your Ringba phone number is: " + window.pnumber + ". Please call it to test!");
+
+    }
+ 
+ 
+    (function(e,d) {
+ 
+        var ringba_com_tag="JSa6d4d80cf89d4d55bec47b14d7b0ed76"; 
+        var _sc = d.getElementsByTagName('script'), _s = _sc[_sc.length - 1];
+ 
+        e._rgba = e._rgba || { q: [] }; e._rgba.q.push({ tag: ringba_com_tag, cb: GetNumber, numberClass: "phNumber", render: false, script: _s });
+ 
         if (!(e._rgba.loading = !!e._rgba.loading)) {
             var sc = d.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
             sc.src = '//js.callcdn.com/js_v2/min/ringba.com.js';
             var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
             e._rgba.loading = true;
         }
-   })(window,document); </script>
-
-Number: <span class="ringbaNumber"/>.
+    })(window,document);
+  </script>	 
