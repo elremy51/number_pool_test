@@ -31,21 +31,25 @@ function setTrackingNumber(number)
   
   window.trackingNumber = number;
 }
-
-setTrackingNumber( getQueryVariable('callthisnumber') );
     
 </script>     
     
 </head>
 
 <body>
-    Phone number should appear here 2:
+    Phone number should appear here 3:
     
     <div class='trackingnumber'>placeholder</div>
 
 <p>Bunch of other text</p>
 
 Somewhere in the footer: <span class='trackingnumber'>placeholder</span>
+
+    <script> 
+
+setTrackingNumber( getQueryVariable('callthisnumber') );
+    
+</script>  
 
 </body>
 
