@@ -6,6 +6,9 @@
  <head>
 
 <script>
+    
+    (window._rgba_tags = (window._rgba_tags || [])).push({testTag:"Gus"});
+    
     function GetNumber(number, tagId, firstTime)
     {
 	if(firstTime)
@@ -18,8 +21,7 @@
         //Ringba.com phone number tracking
         var ringba_com_tag="JSa6d4d80cf89d4d55bec47b14d7b0ed76";
         var _sc = d.getElementsByTagName('script'), _s = _sc[_sc.length - 1];
-	(e._rgba_tags = (e._rgba_tags || [])).push({customtag:"gusTag"});
-        e._rgba = e._rgba || { q: [] }; e._rgba.q.push({ tag: ringba_com_tag, customtag1:"other",cb: GetNumber, numberClass: "phNumber", render: false, script: _s });
+        e._rgba = e._rgba || { q: [] }; e._rgba.q.push({ tag: ringba_com_tag, cb: GetNumber, numberClass: "phNumber", render: false, script: _s });
         if (!(e._rgba.loading = !!e._rgba.loading)) {
             var sc = d.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
             sc.src = '//js.callcdn.com/js_v2/min/ringba.com.js';
@@ -30,7 +32,7 @@
   </script>	 
 </head>
 <body >
-Test 11 : Number = <span class="phNumber"> 666-6666</span>
+Test 12 : Number = <span class="phNumber"> 666-6666</span>
 	</body>
 
 	<script>
