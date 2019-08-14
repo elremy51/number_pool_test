@@ -5,48 +5,34 @@
 
 <!--  -->
  <head>
-  <script lang="javascript">
-    (function _LoadRingba() {
-      var paramName = 'kw';
-      var mapping = {
-        'test1': 'CAb0c2096a88ac45069a6c352b0a35f593',
-	'test2': 'CA306b96752e994812bfa82a7c7011de0e'
 
-	      
-      }
-
-      var _qp = _parseQP();
-      var cmpID = _qp && _qp[paramName] && mapping[_qp[paramName]];
-
-      if (cmpID) {
-        var sc = document.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
-        sc.src = '//b-js.ringba.com/' + cmpID;
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
-      }
-
-      function _parseQP() {
-        var qp = window.location.search.substr(1).split('&');
-        //stackoverflow: http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
-        if (qp == "") return {};
-        var b = {};
-        for (var i = 0; i < qp.length; ++i) {
-          var p = qp[i].split('=', 2);
-          if (p.length == 1)
-            b[p[0]] = "";
-          else
-            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+<script>
+    function GetNumber(number, tagId, firstTime)
+    {
+	if(firstTime)
+        window.pnumber = number;
+        //alert("Your Ringba phone number is: " + window.pnumber + ". Please call it to test!");
+    }
+ 
+ 
+    (function(e,d) {
+        //Ringba.com phone number tracking
+        var ringba_com_tag="JS1a27a83f9959419ab051990659d5de3a";
+        var _sc = d.getElementsByTagName('script'), _s = _sc[_sc.length - 1];
+        e._rgba = e._rgba || { q: [] }; e._rgba.q.push({ tag: ringba_com_tag, cb: GetNumber, numberClass: "phNumber", render: false, script: _s });
+        if (!(e._rgba.loading = !!e._rgba.loading)) {
+            var sc = d.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
+            sc.src = '//js.callcdn.com/js_v3/min/ringba.com.js';
+            var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
+            e._rgba.loading = true;
         }
-        return b;
-      }
-    })();
-  </script>
-
+   })(window,document);
+  </script>	 
 </head>
 <body >
 
-THIS IS YOUR RINBGA POOL NUMBER Mapping 1-888-973-5167
-	<p>
+ Number = <span class="phNumber"> 555-2233</span>
 	
-
+	
 	
 </html>
