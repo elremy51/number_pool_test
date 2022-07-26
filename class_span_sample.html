@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-
 <html>
-
-<!--  -->
-
-<head>
-
-
-
-
-</head>
-
-<body>
+  <!--  -->
         
-
-<script> (function(e,d) {
+        
+  <head></head>
+        
+  <body>
+    <script>
+      (function(e, d) {
         //Ringba.com phone number tracking
-        var ringba_com_tag="JSb699d672f0644b01b4a94f5e7f3164e9";
-        var _sc = d.getElementsByTagName('script'), _s = _sc[_sc.length - 1];
-        e._rgba = e._rgba || { q: [] }; e._rgba.q.push({ tag: ringba_com_tag,numberClass: "phNumber", script: _s });
+        var ringba_com_tag = "JSb699d672f0644b01b4a94f5e7f3164e9";
+        var _sc = d.getElementsByTagName('script'),
+          _s = _sc[_sc.length - 1];
+        e._rgba = e._rgba || {
+          q: []
+        };
+        e._rgba.q.push({
+          tag: ringba_com_tag,
+          render: false,
+          numberClass: "phNumber",
+          script: _s
+        });
         if (!(e._rgba.loading = !!e._rgba.loading)) {
-            var sc = d.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
-            sc.src = '//js.callcdn.com/js_v3/min/ringba.com.js';
-            var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
-            e._rgba.loading = true;
+          var sc = d.createElement('script');
+          sc.type = 'text/javascript';
+          sc.async = true;
+          sc.src = '//js.callcdn.com/js_v3/min/ringba.com.js';
+          var s = d.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(sc, s);
+          e._rgba.loading = true;
         }
-   })(window,document); </script>       
-      <br>  
-  Test 4 <br>
-  Number = <span class="phNumber"> 555-2233</span>
-</body>
-
-<script>
-  location.href = "tel:+" + < span class = "phNumber" > < /span> ;
-</script>
-
+      })(window, document);
+    </script>
+          
+          
+    <br> Test 
+    <br> Number = <span class="phNumber"> 555-2233</span>
+  </body>
+  
 </html>
