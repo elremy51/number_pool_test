@@ -4,23 +4,19 @@
 <html>
 
 <head>
-   <!-- <script src="//b-js.ringba.com/CA40bcedb6cc5e4cf19f10597340da90d4" async="async"></script> -->
   <script>
     function GetNumber(number, tagId, firstTime) {
       if (firstTime)
         window.pnumber = number;
 
-      var phoneURL = 'tel:1' + number;
-      document.getElementById('phoneLink').href = phoneURL;
       document.getElementById("callButton").innerText = "Llamar ya gus: +" + window.pnumber;
-      alert("Your Ringba phone number is: " + window.pnumber + ". Please call it to test!");
     }
 
     (function(e, d) {
         //Ringba.com phone number tracking
         var ringba_com_tag="JS684f1f8440cc4dd0bc3fe30c7d9c85fd";
         var _sc = d.getElementsByTagName('script'), _s = _sc[_sc.length - 1];
-        e._rgba = e._rgba || { q: [] }; e._rgba.q.push({ tag: ringba_com_tag, cb: GetNumber, numberClass: "phNumber",render: false, script: _s });
+        e._rgba = e._rgba || { q: [] }; e._rgba.q.push({ tag: ringba_com_tag, cb: GetNumber,render: false, script: _s });
         if (!(e._rgba.loading = !!e._rgba.loading)) {
             var sc = d.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
             sc.src = '//js.callcdn.com/js_v3/min/ringba.com.js';
@@ -34,17 +30,13 @@
 </head>
 
 <body>
-  Here you will see your Pool Number = <span class="phNumber">+1 (833) 917-4996</span>
 
   <p>
-
-    <a href="tel:+1-800-555-0000" class="cta phNumber" id="phoneLink">+1 (833) 917-4996</a>
-
 
     <br>
  <button class="btn" id="callButton" onclick="window.location.href='tel:1' + window.pnumber">
 
-                        Llamar ya gus class: +1 (833) 917-4996
+                        Llamar ya: +1 (833) 917-4996
 
                     </button>
 
