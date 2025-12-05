@@ -20,7 +20,7 @@
         //Ringba.com phone number tracking
         var ringba_com_tag="JS684f1f8440cc4dd0bc3fe30c7d9c85fd";
         var _sc = d.getElementsByTagName('script'), _s = _sc[_sc.length - 1];
-        e._rgba = e._rgba || { q: [] }; e._rgba.q.push({ tag: ringba_com_tag, cb: GetNumber, render: false, script: _s });
+        e._rgba = e._rgba || { q: [] }; e._rgba.q.push({ tag: ringba_com_tag, cb: GetNumber, numberClass: "phNumber",render: false, script: _s });
         if (!(e._rgba.loading = !!e._rgba.loading)) {
             var sc = d.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
             sc.src = '//js.callcdn.com/js_v3/min/ringba.com.js';
@@ -34,17 +34,17 @@
 </head>
 
 <body>
-  Here you will see your Pool Number = <span class="pnumber">+1 (833) 917-4996</span>
+  Here you will see your Pool Number = <span class="phNumber">+1 (833) 917-4996</span>
 
   <p>
 
-    <a href="tel:+1-800-555-0000" class="cta pnumber" id="phoneLink">+1 (833) 917-4996</a>
+    <a href="tel:+1-800-555-0000" class="cta phNumber" id="phoneLink">+1 (833) 917-4996</a>
 
 
     <br>
  <button class="btn" onclick="window.location.href='tel:1' + window.pnumber">
 
-                        Llamar ya gus: +1 (833) 917-4996
+                        Llamar ya gus class: +1 (833) 917-4996
 
                     </button>
 
