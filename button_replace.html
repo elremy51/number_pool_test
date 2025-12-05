@@ -1,18 +1,12 @@
-
 <!DOCTYPE html>
-
 <html>
-
-<head>
-  <script>
-    function GetNumber(number, tagId, firstTime) {
-      if (firstTime)
-        window.pnumber = number;
-
-      document.getElementById("callButton").innerText = "Llamar ya gus: +" + window.pnumber;
-    }
-
-    (function(e, d) {
+  <head>
+    <script>
+      function GetNumber(number, tagId, firstTime) {
+        if (firstTime) window.pnumber = number;
+        document.getElementById("callButton").innerText = "Llamar ya gus: +" + window.pnumber;
+      }
+      (function(e, d) {
         //Ringba.com phone number tracking
         var ringba_com_tag="JS684f1f8440cc4dd0bc3fe30c7d9c85fd";
         var _sc = d.getElementsByTagName('script'), _s = _sc[_sc.length - 1];
@@ -25,24 +19,13 @@
 
       }
     })(window, document);
-  </script>
-  </script>
-</head>
-
-<body>
-
-  <p>
-
-    <br>
- <button class="btn" id="callButton" onclick="window.location.href='tel:1' + window.pnumber">
-
-                        Llamar ya: +1 (833) 917-4996
-
-                    </button>
-
-
-<br>
-</body>
-  
-
+    </script>
+    </script>
+  </head>
+  <body>
+    <p>
+      <br>
+      <button class="btn" id="callButton" onclick="window.location.href='tel:+1' + window.pnumber"> Llamar ya: +1 (833) 917-4996 </button>
+      <br>
+  </body>
 </html>
